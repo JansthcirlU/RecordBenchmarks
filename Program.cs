@@ -1,4 +1,5 @@
-﻿using Test;
+﻿using BenchmarkDotNet.Running;
+using Test;
 
 #if RELEASE
     BenchmarkRunner.Run<Benchmark>();

@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Test;
+
+#if RELEASE
+    BenchmarkRunner.Run<Benchmark>();
+#else
+    Benchmark b = new();
+    b.GlobalSetup();
+#endif
